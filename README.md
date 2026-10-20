@@ -20,7 +20,7 @@ savvy-flow and savvy-progress work on their own and light up together: with both
 In Claude Code:
 
 ```
-/plugin marketplace add johnnyvizz/claude-kit
+/plugin marketplace add joaov-ferreira/claude-kit
 /plugin install savvy-flow@claude-kit
 /plugin install savvy-progress@claude-kit
 ```
@@ -30,7 +30,7 @@ Restart the session afterwards. Plugin skills and agents are namespaced: the ski
 ### By hand
 
 ```bash
-git clone https://github.com/johnnyvizz/claude-kit.git ~/claude-kit
+git clone https://github.com/joaov-ferreira/claude-kit.git ~/claude-kit
 ```
 
 **A skill** (no plugin system involved, names stay short: `/savvy-flow`, `savvy-careful`): copy its folders into your Claude Code config.
