@@ -369,16 +369,16 @@ const colorOf = (tier: string): string => TIER_COLOR[tier] ?? '#888780'
 
 const TIER_MODEL: Record<string, [model: string, effort: string]> = {
   fable: ['Fable', 'high'],
-  heavy: ['Opus', 'xhigh'],
-  careful: ['Opus', 'high'],
-  medium: ['Opus', 'medium'],
-  light: ['Opus', 'low'],
+  heavy: ['Opus', 'medium'],
+  careful: ['Sonnet', 'high'],
+  medium: ['Sonnet', 'low'],
+  light: ['Haiku', ''],
 }
 
 // "Opus · xhigh", with the effort word in the panel's language; '' for an unknown tier.
 const tierModel = (tier: string): string => {
   const m = TIER_MODEL[tier]
-  return m ? `${m[0]} · ${effortWord(m[1])}` : ''
+  return m ? (m[1] ? `${m[0]} · ${effortWord(m[1])}` : m[0]) : ''
 }
 
 // "Opus 5.5 · low" for a run, or just the model when no effort was seen.

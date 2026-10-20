@@ -65,15 +65,15 @@ Design decisions are yours. Workers never invent UI, with one exception below.
 
 ## 3. Tiering
 
-Pick the cheapest tier that will get the task right the first time. Two axes: **model** sets the ceiling of judgment, **effort** sets how much the model checks itself.
+Pick the cheapest tier that will get the task right the first time. Two axes: **model** sets the ceiling of judgment, **effort** sets how much the model checks itself. Only Heavy and Fable run the strongest models: Careful and Medium run on Sonnet, Light on Haiku (which takes no effort setting). Because the cheaper models have a lower ceiling, write their briefs tighter and review them harder.
 
 | Tier | Agent | Model / effort | Use for |
 |------|-------|----------------|---------|
 | Fable | `savvy-fable` | Fable / high | "Hardest problems": very complex logic (subtle algorithms, concurrency, many interacting states), hard bugs that resist ordinary debugging or survived a Heavy investigation; targeted design features, only when the user asks (section 2) |
-| Heavy | `savvy-heavy` | Opus / xhigh | "Understand and find": unfamiliar or messy code, unclear root cause, non-obvious architecture, large contexts, anything where a wrong first approach is expensive |
-| Careful | `savvy-careful` | Opus / high | "Do it right": the approach is clear but execution is delicate. Multi-file refactors, fixes that must preserve invariants, logic with many edge cases, concurrency |
-| Medium | `savvy-medium` | Opus / medium | Standard feature work, bug fixes with a known cause, changes confined to a few files with clear requirements |
-| Light | `savvy-light` | Opus / low | Mechanical edits, renames, boilerplate, config, small isolated fixes, running builds/tests and reporting |
+| Heavy | `savvy-heavy` | Opus / medium | "Understand and find": unfamiliar or messy code, unclear root cause, non-obvious architecture, large contexts, anything where a wrong first approach is expensive |
+| Careful | `savvy-careful` | Sonnet / high | "Do it right": the approach is clear but execution is delicate. Multi-file refactors, fixes that must preserve invariants, logic with many edge cases, concurrency |
+| Medium | `savvy-medium` | Sonnet / low | Standard feature work, bug fixes with a known cause, changes confined to a few files with clear requirements |
+| Light | `savvy-light` | Haiku | Mechanical edits, renames, boilerplate, config, small isolated fixes, running builds/tests and reporting |
 
 Heuristics:
 - Uncertain between two tiers → take the higher one. Exception: Fable is a reserve tier; pick it only when the task clearly meets its criteria, otherwise Heavy.
