@@ -1,6 +1,8 @@
 # claude-kit
 
-My public skills and mods for [Claude Code](https://claude.com/claude-code), in one place. Every item is a standalone plugin under `plugins/`: install only what you need.
+Forked from johnnyvizz/claude-kit
+
+My main objective here is to change the skill to reduce the tier of the agents to save on tokens. Still is in WIP state while I test for a couple days and tune this
 
 | Plugin | Type | What it does |
 | --- | --- | --- |
