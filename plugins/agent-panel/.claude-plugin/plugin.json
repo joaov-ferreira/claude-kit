@@ -1,0 +1,13 @@
+{
+  "name": "agent-panel",
+  "version": "0.1.0",
+  "description": "Painel de subagentes da sessão (/agent-panel): cards com status, contexto, tokens e tempo, e o caranguejo Clawd animado. Funciona sozinho, sem skill.",
+  "author": {
+    "name": "joaov-ferreira",
+    "url": "https://github.com/joaov-ferreira"
+  },
+  "types": "./types/index.d.ts",
+  "homepage": "https://github.com/joaov-ferreira/claude-kit/tree/main/plugins/agent-panel",
+  "repository": "https://github.com/joaov-ferreira/claude-kit",
+  "license": "MIT"
+}

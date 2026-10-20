@@ -1,7 +1,12 @@
 {
   "name": "claude-kit",
-  "owner": { "name": "johnnyvizz", "url": "https://github.com/johnnyvizz" },
-  "metadata": { "description": "johnnyvizz's public Claude Code skills and mods." },
+  "owner": {
+    "name": "johnnyvizz",
+    "url": "https://github.com/johnnyvizz"
+  },
+  "metadata": {
+    "description": "johnnyvizz's public Claude Code skills and mods."
+  },
   "plugins": [
     {
       "name": "savvy-flow",
@@ -22,6 +27,13 @@
       "source": "./plugins/session-band",
       "description": "Mod: band above the prompt with turn, speed, cost, prompt cache countdown and context; notifies before the cache expires.",
       "version": "0.2.0",
+      "category": "mod"
+    },
+    {
+      "name": "agent-panel",
+      "source": "./plugins/agent-panel",
+      "description": "Mod: live panel of the session's subagents with the animated Clawd crab; works on its own via /agent-panel, no skill needed.",
+      "version": "0.1.0",
       "category": "mod"
     }
   ]
